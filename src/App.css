@@ -1,0 +1,106 @@
+.app-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.video-thumbnail:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.points-panel {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #2d7a2d;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.food-list, .word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.food-item, .word-item {
+  background: #f0f0ff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.food-item.selected, .word-item.selected {
+  background: #ffe066;
+  box-shadow: 0 0 0 3px #ffe066;
+}
+
+.food-item.matched, .word-item.matched {
+  background: #b6fcb6;
+  color: #2d7a2d;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.food-item.wrong, .word-item.wrong {
+  background: #ffb3b3;
+  box-shadow: 0 0 0 3px #ffb3b3;
+}
+
+.food-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.congrats {
+  margin-top: 32px;
+  font-size: 2rem;
+  color: #2d7a2d;
+  text-align: center;
+  font-weight: bold;
+} 
